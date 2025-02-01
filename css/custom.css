@@ -1,0 +1,33 @@
+:root {
+    --blue-sky: #3b70fc;
+}
+
+#post blockquote {
+    border-left: 5px solid var(--blue-sky);
+}
+
+a:hover span.nota {
+    color: white;
+}
+
+#post ~ #aside-content .card-info {
+    display: none;
+}
+
+#post ~ #aside-content #card-toc {
+    margin-top: 0px;
+}
+
+
+/* #post h3:before,
+#post h4:before,
+#post h5:before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 0;
+    width: 4px;
+    border-radius: 2px;
+    background: var(--blue-sky);
+} */

@@ -1,0 +1,230 @@
+.post-bg:has(.bldbanner) #post-info:after,
+.post-bg:has(.bili-banner) #post-info:after,
+.post-bg:has(.blqbanner) #post-info:after {
+    box-shadow: 0px -214px 287px 45px var(--anzhiyu-black-op) inset;
+}
+
+.post-bg:has(.bldbanner) #post-info .post-meta,
+.post-bg:has(.bili-banner) #post-info .post-meta,
+.post-bg:has(.blqbanner) #post-info .post-meta {
+    pointer-events: all;
+}
+
+.post-bg:has(.bldbanner) #post-info,
+.post-bg:has(.bili-banner) #post-info,
+.post-bg:has(.blqbanner) #post-info {
+    pointer-events: none;
+}
+
+#page-header.post-bg:has(.bldbanner),
+#page-header.post-bg:has(.bili-banner),
+#page-header.post-bg:has(.blqbanner) {
+    height: 15rem;
+}
+
+
+header#page-header:has(.bldbanner),
+header#page-header:has(.bili-banner),
+header#page-header:has(.blqbanner) {
+    height: 100%;
+}
+
+header:has(.bldbanner)~main,
+header:has(.bili-banner)~main,
+header:has(.blqbanner)~main {
+    transform: translateY(-2.5%);
+}
+
+h1.page-title:has(~ div#comics) {
+    text-align: center;
+}
+
+.bili-banner {
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 11rem;
+    min-height: 155px;
+    min-width: 999px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.bili-banner .animated-banner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.bili-banner .layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bili-banner .layer img {
+    transition: transform 0.2s;
+}
+
+
+
+
+.blqbanner {
+    height: 15rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.blqbanner>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*    将图片上下左右居中*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --offset: 0px;
+    --blur: 2px;
+}
+
+.blqbanner>div>img {
+    display: flex;
+    width: 110%;
+    /*    图片需要左右移动，预先设置的宽一些*/
+    height: 100%;
+    object-fit: cover;
+    /*    将图片按照比例填满容器*/
+    transform: translateX(var(--offset));
+    filter: blur(var(--blur));
+    transition: 0.3s;
+}
+
+.blqbanner>div:nth-child(1)>img {
+    --offset: 1.38426px;
+    --blur: 0.226766px;
+}
+
+.blqbanner>div:nth-child(2)>img {
+    --offset: 1.79954px;
+    --blur: 0.0724451px;
+}
+
+.blqbanner>div:nth-child(3)>img {
+    --offset: 2.3394px;
+    --blur: 1.02924px;
+}
+
+.blqbanner>div:nth-child(4)>img {
+    --offset: 3.04122px;
+    --blur: 3.09714px;
+}
+
+.blqbanner>div:nth-child(5)>img {
+    --offset: 3.95358px;
+    --blur: 6.27615px;
+}
+
+.blqbanner>div:nth-child(6)>img {
+    --offset: 5.13966px;
+    --blur: 10.5663px;
+}
+
+
+
+.bldbanner {
+    min-height: 155px;
+    height: 20rem;
+    position: relative;
+    overflow: hidden;
+    --percentage: 0.5;
+}
+
+.bldbanner .tree,
+.bldbanner .bldview {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.bldbanner .bldview {
+    -webkit-transform: translatex(calc(var(--percentage) * 100px));
+    transform: translatex(calc(var(--percentage) * 100px));
+}
+
+.bldbanner .tree {
+    -webkit-transform: translatex(calc(var(--percentage) * 150px - 25px));
+    transform: translatex(calc(var(--percentage) * 150px - 25px));
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+
+.bldbanner img,
+.bldbanner video {
+    position: absolute;
+    height: 100%;
+    max-width: none;
+}
+
+.bldbanner .evening {
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    z-index: 20;
+    opacity: calc((0.5 - var(--percentage)) / 0.5);
+}
+
+.bldbanner .afternoon {
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    z-index: 10;
+    opacity: calc(1 - (var(--percentage) - 0.5) / 0.5);
+}
+
+.bldbanner.moving .afternoon,
+.bldbanner.moving .ball,
+.bldbanner.moving .evening,
+.bldbanner.moving .tree,
+.bldbanner.moving .bldview {
+    -webkit-transition: none;
+    transition: none;
+}
+
+.bldbanner .ball {
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    z-index: 10;
+    opacity: calc(1.5 - (var(--percentage) - 0.5) / 0.5);
+    -webkit-transform: translate(calc(100px * var(--percentage)), 22px) rotate(calc(10deg * var(--percentage) + 5deg));
+    transform: translate(calc(100px * var(--percentage)), 22px) rotate(calc(10deg * var(--percentage) + 5deg));
+}
+
+.bldbanner .window-cover {
+    z-index: 20;
+    opacity: calc(var(--percentage) * -2);
+}
