@@ -4,7 +4,7 @@ import { plumeTheme } from 'vuepress-theme-plume'
 import { notes } from './notes'
 
 export default defineUserConfig({
-  base: '/',
+  base: '/SevenLifey/',
   lang: 'zh-CN',
   title: 'Seven Lifey',
   description: '柒笙的频道',
