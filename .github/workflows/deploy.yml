@@ -1,9 +1,9 @@
 name: deploy
 
 on:
-  # 每当 push 到 master 分支时触发部署
+  # 每当 push 到 docs 分支时触发部署
   push:
-    branches: [master]
+    branches: [docs]
   # 手动触发部署
   workflow_dispatch:
 
@@ -16,6 +16,8 @@ jobs:
         with:
           # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
+          # docs 分支
+          ref: "docs"
 
       - name: 设置 pnpm
         uses: pnpm/action-setup@v4

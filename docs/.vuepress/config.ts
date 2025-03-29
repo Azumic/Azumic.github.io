@@ -23,15 +23,24 @@ export default defineUserConfig({
     // hostname: 'https://your_site_url',
 
     /* 文档仓库配置，用于 editLink */
-    // docsRepo: '',
-    // docsDir: 'docs',
-    // docsBranch: '',
+    docsRepo: 'https://github.com/Azumic/SevenLifey',
+    docsDir: 'docs',
+    docsBranch: 'docs',
 
     /* 页内信息 */
-    // editLink: true,
-    // lastUpdated: true,
-    // contributors: true,
-    // changelog: false,
+    editLink: true,
+    lastUpdated: { formatOptions: { dateStyle: 'short', timeStyle: 'short' } },
+    contributors: {
+      mode: 'block',
+    },
+    changelog: true,
+
+    plugins: {
+      // 如果您在此处直接声明为 true，则表示开发环境和生产环境都启用该功能
+      git: process.env.NODE_ENV === 'production'
+    },
+
+
 
     /**
      * 博客

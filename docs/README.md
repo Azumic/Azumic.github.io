@@ -14,7 +14,7 @@ config:
         -
           theme: brand
           text: 整合包
-          link: /modpacks/intro/
+          link: /packlifey/netherback/
         -
           theme: alt
           text: Github →
