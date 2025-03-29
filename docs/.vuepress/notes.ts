@@ -11,6 +11,7 @@ const packLifey = defineNoteConfig({
       items: [
         '止步于此',
         '步入正堂',
+        '天罗地网进行时',
       ],
     },
     {
