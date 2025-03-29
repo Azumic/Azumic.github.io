@@ -7,13 +7,13 @@ config:
     full: true
     background: tint-plate
     hero:
-      name: Theme Plume
-      tagline: VuePress Next Theme
-      text: 一个简约的，功能丰富的 vuepress 文档&博客 主题
+      name: Seven Lifey
+      tagline: 柒笙的频道
+      text: 一个私人 MC 的频道，书写与 Minecraft 的所见所闻。
       actions:
         -
           theme: brand
-          text: 整合包
+          text: 柒笙碌
           link: /packlifey/netherback/
         -
           theme: alt
