@@ -31,7 +31,7 @@ export default defineUserConfig({
     editLink: true,
     lastUpdated: { formatOptions: { dateStyle: 'short', timeStyle: 'short' } },
     contributors: {
-      mode: 'block',
+      mode: 'inline',
     },
     changelog: true,
 
